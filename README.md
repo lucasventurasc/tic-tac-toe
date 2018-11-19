@@ -24,7 +24,7 @@ Supposing that your file calls configuration.properties,
 when the game asks the file path, type
 
 ```bash
-/tmp-inside-docker-container/configuration.properties
+/tmp-inside-container/configuration.properties
 ```
 
 The game will start.
@@ -77,9 +77,12 @@ To run mutation tests:
 ```
 ./gradlew pitest
 ```
+The index.html will be generated at $project_direcotry/build/reports/pitest/index.html
 
-After run mutation tests if you want to open the report through command line type (must have firefox installed), not tested with MacOS
+After run mutation tests if you want to open the report through command line type:
+*(must have firefox installed)
+
 ```
 ./gradlew piport
 ```
-The index.html of the report is located at $project_direcotry/build/reports/pitest/index.html
+Gradle piport is equivalent as open the $project_direcotry/build/reports/pitest/index.html manually
